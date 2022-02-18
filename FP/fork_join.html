@@ -1,0 +1,16 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script>
+        const fork = function(join, funA, funB)
+        {
+            return function(val)
+            {
+                return join(funA(val), funB(val));
+            }
+        };
+
+        let data = [10,20,30,40,50];
+        const avg = fork(R.divide, R.sum, R.length);
+        console.log("average", avg(data))
+    </script>
+</html>

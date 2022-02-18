@@ -1,0 +1,34 @@
+<html>
+    <script>
+   //const students = ['acid', 'zaw zaw', 'mg mg', 'aung aung'];
+    const grade = [70, 80, 92, 60];
+
+    const students = [
+        {
+            name : 'acid',
+            grade : 20
+        },
+
+        {
+            name : 'zaw zaw',
+            grade : 80
+        },
+
+        {
+            name : 'mg mg',
+            grade : 92
+        },
+
+        {
+            name : 'aung aung',
+            grade : 60
+        }
+    ];
+    
+    const getname = (lst) => lst.name
+    const maxpair = (user1, user2) => user1.grade > user2.grade? user1: user2;
+    const result = getname(students.reduce(maxpair));
+
+    console.log("result", result)
+    </script>
+</html>

@@ -1,0 +1,34 @@
+<html>
+    <script>
+        function info(name, age, school)
+        {
+            /*if(console.log(arguments.length) != 3)
+            {
+                console.warn("Please fill all required parameters")
+            }*/
+            
+            console.log("name is", name, "age is", age, "school is", school);
+        }
+
+        info("Acid", 21,"SLM");
+
+        function showinfo(parm)
+        {
+            let defaultconfig = {
+            name : "acid",
+            age : 30,
+            school : "SLM",
+            town : "khampat"
+            };
+
+            parm = Object.assign(defaultconfig, parm);
+            console.log("name", parm.name, "age", parm.age, "school", parm.school);
+        }
+        showinfo({
+            name : "acid",
+            age : 21,
+            school : "SLM",
+            town : "khampat"
+        })
+    </script>
+</html>

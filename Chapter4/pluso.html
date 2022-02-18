@@ -1,0 +1,62 @@
+<html>
+    <script>
+        let a = 2;
+        let b = '5';
+        let c = 4;
+
+        console.log("a + b", a + b)
+        console.log("a + c", a + c)
+
+        let obj = 
+        {
+            valueOf:function()
+            {
+                console.log("value of called");
+                return 5;
+            }
+        }
+
+        console.log("a + obj", a + obj);
+
+        let obj2 = 
+        {
+            toString:function()
+            {
+                console.log("toString called");
+                return 7;
+            },
+
+            valueOf:function()
+            {
+                console.log("value of called");
+                return 5;
+            }
+        };
+
+        console.log("a + obj2", a + obj2);
+
+        let obj3 = 
+        {
+            valueOf:function()
+            {
+                console.log("value of called");
+                return {};
+            },
+
+            toString:function()
+            {
+                console.log("toString called");
+                return obj2;
+            }
+        };
+
+       // console.log("a + obj3", a + obj3)
+
+       let now = new Date;
+       console.log("now + obj2", now + obj2)
+
+       let d = 2;
+        let e = ++d;
+       console.log("e is ", e);
+    </script>
+</html>

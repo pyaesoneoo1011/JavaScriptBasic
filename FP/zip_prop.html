@@ -1,0 +1,51 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script>
+        const students = ['acid', 'zaw zaw', 'mg mg', 'aung aung'];
+        const grade = [70, 80, 92, 60];
+
+        let  pairstu = R.zip(students, grade);
+        console.log("pairstu", pairstu);
+        //console.log("type", typeof(pairstu));
+
+        let obj = {
+            data : {
+                schooll : {
+                    name : "SLM"
+                }
+            }
+        };
+
+        let users = [
+            {
+                name : 'acid',
+                age : 21
+            },
+
+            {
+                name : 'haru',
+                age : 20
+            },
+
+            {
+                name : 'zylo',
+                age : 19
+            },
+
+            {
+                name : 'karke',
+                age : 22
+            }
+        ];
+
+
+        //console.log("property", R.prop('name'), users);
+        //console.log("School name", obj.data.school.name);
+        //console.log("School name prop", R.prop('name'), obj);
+        console.log("SobyBy", R.sortBy(R.prop('age'), users));
+        console.log("Reverse", R.reverse(grade));
+        console.log("Pluck", R.pluck('name', users));
+        console.log("map version", R.map(R.prop('name'), users));
+        console.log("first name", R.head(R.map(R.prop('name'), users)))
+    </script>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <script>
+
+        let result = "3 multiply 3 is equal to 9".match(/\d+/g);
+        console.log("result ", result);
+
+        let email = "acid@gmail.com";
+        let pattern = /(?<username>\w+)@(\w+)\.(com|org|gov)/i;
+        result = email.match(pattern)
+
+        console.log("result ", result);
+        console.log("full email",result[0]);
+        console.log("username",result[1]);
+        console.log("domain name",result[2]);
+        console.log("end",result[3]);
+
+        console.log("username", result.groups.username);
+
+        let vowel = /[aeiou]/y;
+
+        console.log("test.match", "test".match(vowel));
+        vowel.lastIndex = 1;
+        console.log("test.match", "test".match(vowel));
+
+    </script>
+</html>

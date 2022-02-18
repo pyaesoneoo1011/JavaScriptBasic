@@ -1,0 +1,23 @@
+<html>
+    <script>
+        let url = new URL("https://example.com:8000/path/name?q=term#fragment");
+        
+        console.log("url", url);
+
+        let url2 = new URL("http://localhost:8080");
+        console.log("url2", url2);
+        url2.pathname = "pat";
+        url2.search = "adding";
+        url2.searchParams.append("fb","facebook")
+        console.log("url2", url2);
+        console.log("has", url2.searchParams.has("adding"));
+        console.log("has", url2.searchParams.has("fb"));
+
+        let encoded = encodeURI("http://www.example.com:8080/q?how are you");
+        console.log("encoded url", encoded);
+
+        let decoded = decodeURI(encoded);
+        console.log("decoded", decoded)
+ 
+    </script>
+</html>

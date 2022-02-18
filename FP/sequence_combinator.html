@@ -1,0 +1,32 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script>
+        const seq = function()
+        {
+            const funcs = Array.prototype.slice.call(arguments);
+            console.log("funcs", funcs)
+            return function(val)
+            {
+                funcs.forEach(function(fun)
+                {
+                    fun(val);
+                });
+            }
+        };
+
+        const display = function(str)
+        {
+            console.log("Hello " + str)
+        };
+        
+        const greeting = function(str)
+        {
+            console.log("Good evening sir");
+        };
+
+        const combine = seq(console.log,  display);
+        combine("acid");
+        //const rcom = R.sequence(greeting, display);
+        //console.log("ramda version ", rcom)
+    </script>
+</html>

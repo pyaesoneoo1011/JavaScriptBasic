@@ -1,0 +1,49 @@
+<html>
+    <script>
+        let pattern = /\w/i;
+
+        console.log("Hello", pattern.test("Hello"));
+        console.log("4025", pattern.test("4025"));
+        console.log("4025apple", pattern.test("4025apple"));
+
+        pattern = /\W/i;
+
+        console.log("Hello", pattern.test("Hello"));
+        console.log("4025", pattern.test("4025"));
+        console.log("4025apple", pattern.test("4025apple"));
+        console.log("''", pattern.test("''"));
+        console.log("%@", pattern.test("%@"));
+
+        pattern = /\s/i;
+
+        console.log("Hello", pattern.test("Hello"));
+        console.log("4025", pattern.test("4025"));
+        console.log("4025apple", pattern.test(" 4025apple "));
+        console.log("' '", pattern.test(" "));
+        console.log("%@", pattern.test("%@"));
+
+        pattern = /\S/i;
+
+        console.log("Hello", pattern.test("Hello"));
+        console.log("4025", pattern.test("4025"));
+        console.log("4025apple", pattern.test(" 4025apple "));
+        console.log("''", pattern.test(" "));
+        console.log("%@", pattern.test("%@"));
+
+        pattern = /\d/;
+
+        console.log("2040apple", pattern.test("2040apple"));
+        console.log("4025", pattern.test("4025"));
+        console.log("goes", pattern.test("goes"));
+        console.log("", pattern.test(""));
+        console.log("%@", pattern.test("%@"));
+
+        pattern = /\D/;
+
+        console.log("2040apple", pattern.test("2040apple"));
+        console.log("4025", pattern.test("4025"));
+        console.log("goes", pattern.test("goes"));
+        console.log("", pattern.test(""));
+        console.log("%@", pattern.test("%@"));
+    </script>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <script>
+        let obj = {
+            name : "Acid",
+            age : 21,
+            display : function(msg){
+                console.log(msg, "Name", this.name, "Age", this.age)
+            }
+        }
+        obj.display("Hi");
+
+        let d = obj.display;
+        d.call(obj,"Hello");
+
+        let obj2 = {
+            name : "Demon",
+            age : 20,
+        }
+
+        d.call(obj2,"Hello");
+    </script>
+</html>

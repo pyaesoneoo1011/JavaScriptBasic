@@ -1,0 +1,27 @@
+<html>
+    <script>
+        function wrapper(val)
+        {
+            return {
+                map : function(fun){
+                    return wrapper(fun(val))
+                },
+
+                identity:function(val)
+                {
+                    return wrapper(val);
+                },
+
+                valueOf(){
+                    return val;
+                }
+            }
+        };
+
+        const inc = (val) => val + 1;
+        const multipy = (val) => val * 3;
+        const wrapperzero = wrapper(0);
+        console.log("wrapper zero", wrapperzero.map(inc).map(multipy).valueOf());
+        console.log("identity", wrapperzero.identity(0).valueOf())
+    </script>
+</html>

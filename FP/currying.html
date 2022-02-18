@@ -1,0 +1,31 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script>
+        function add(x, y)
+        {
+            return  x + y;
+        }
+        console.log(add(2,3));
+
+        function adding(x)
+        {
+            return function(y)
+            {
+                return x + y;
+            }
+        }
+
+        console.log("adding", adding(2)(3));
+        const addtwo = adding(2);
+        console.log("addother", addtwo(10))
+
+        const radd = R.add(10);//partial application
+        console.log("raad ", radd(15));
+
+        const greet = (msg) => (name) => name + msg;
+        const toupper = (str) => str.toUpperCase();
+
+        const partial_greet = R.pipe(toupper, greet("Acid"));
+        console.log("result", partial_greet("hello "));
+    </script>
+</html>

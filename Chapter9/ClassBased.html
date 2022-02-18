@@ -1,0 +1,44 @@
+<html>
+    <script>
+        class Human
+        {
+            constructor(name, age)
+            {
+                this.name = name;
+                this.age = age;
+            }
+
+            display()
+            {
+                console.log("Name is ", this.name, "Age is ", this.age);
+            }
+
+            changename(name)
+            {
+                this.name = name
+            }
+        }
+
+        let h = new Human("Acid", 21);
+        h.display();
+
+        class Teacher extends Human
+        {
+            constructor(name, age, school)
+            {
+                super(name, age);
+                this.school = school;
+            }
+
+        }
+
+        let teacher = new Teacher("Zaw Zaw", 21, "SLM");
+        teacher.display();
+
+        let teacher2 = new Teacher("Mg Mg", 37, "UCSY");
+        teacher2.display();
+        teacher.changename("Changed");
+        console.log("teacher.name ", teacher.name);
+        console.log("teacher2.name ", teacher2.name);
+    </script>
+</html>

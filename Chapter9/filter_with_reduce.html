@@ -1,0 +1,23 @@
+<html>
+    <script>
+        const isEven = (x) => x %2 == 0;
+        let array = [1,2,3,4,5,6];
+        //console.log("even arr", arr.filter(isEven))
+
+        function filter(lst, predicatefun)
+        {
+            return lst.reduce((arr, element) => {
+                return predicatefun(element)? arr.concat(element) : arr;
+            }, [])
+        }
+
+        console.log("filter", filter(array, isEven));
+
+        function map(lst, mapper)
+        {   
+            return lst.reduce((arr, element) => arr.concat(mapper(element)), []);
+        };
+
+        console.log("map ", map(array, x => x * 2));
+    </script>
+</html>

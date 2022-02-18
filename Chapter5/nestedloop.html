@@ -1,0 +1,17 @@
+<html>
+    <script>
+        outer:for(let i = 0; i < 10; i++)
+        {
+            console.log("Outer loop",i)
+            for(let j = 0; j < 5; j++)
+            {
+                console.log("inner loop",j);
+                if(i == 3)
+                {
+                    break outer;
+                }
+            }
+        }
+        console.log("End of code")
+    </script>
+</html>

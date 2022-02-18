@@ -1,0 +1,43 @@
+<html>
+    <script>
+
+        const functor  =  (val) => ({
+            value : val,
+            map : (fun) => functor(fun(val)),
+            valueOf : () => val
+        });
+
+        /*function maybe(value)
+        {
+            function isNothing()
+            {
+                return (value === null) || (value === undefined);
+            }
+            return {
+                map : function(fun)
+                {
+                    //console.log("isnothing ", isNothing());
+                    return isNothing()? maybe(null) : maybe(fun(value));
+                },
+
+                identity:function(value)
+                {
+                    return value;
+                },
+
+                valueOf()
+                {
+                    //console.log("value ", value)
+                    return value;
+                }
+            }
+        };*/
+
+        const toupper = (str) => str.toUpperCase();
+        const appenhi = (str) => str + " hi";
+        //const display = maybe("orange");
+        //const test = functor(null);
+        const test = functor("hello");
+        console.log("test ", test.map(toupper).map(appenhi).valueOf());
+    </script>
+</html>

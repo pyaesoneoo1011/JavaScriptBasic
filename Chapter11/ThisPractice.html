@@ -1,0 +1,51 @@
+<html>
+    <script>
+        /*class This
+        {
+            constructor(name, age)
+            {
+                this.name = name;
+            }
+
+            display()
+            {
+                console.log("name is ", name);
+                console.log("this ", this)
+            }
+
+        };
+
+        let t = new This("Mg Mg", 21);
+        t.display();*/
+
+        const hello = (str) => 
+        {
+            console.log(str);
+            console.log("this ", this)
+        };
+
+        hello("Good Morning");
+
+        const MgMg = {
+            birthyear : 2000,
+            school : "SLM",
+
+            calcul : function()
+            {
+                console.log("Now MgMg's age ", 2020 - this.birthyear);
+                console.log("this ", this);
+            }
+
+        };
+
+        let m = MgMg;
+        m.calcul();
+
+        const kyawkyaw = {
+            birthyear : 2001,
+        }
+
+        kyawkyaw.calcul = MgMg.calcul;
+        kyawkyaw.calcul();
+    </script>
+</html>

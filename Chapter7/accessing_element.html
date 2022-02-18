@@ -1,0 +1,49 @@
+<html>
+    <script>
+        let arr = [10,20,30,'hello'];
+        console.log("arr", arr)
+        console.log("arr[2]", arr[2]);
+        arr[2] = 100;
+        console.log("arr[2]", arr[2]);
+        console.log("arr", arr);
+
+        let obj = {};
+        obj[1] = "hello";
+        console.log("obj", obj);
+        arr[-15] = 20;
+        console.log("arr", arr)
+
+        arr.push(500);
+        console.log("arr", arr, "length", arr.length);
+        
+        delete arr[5];
+        console.log("delete arr[5]", delete arr[4]);
+        console.log("5 in arr", 5 in arr);
+        console.log("arr", arr, "length", arr.length);
+
+        for(const element of arr)
+        {
+            console.log(element);
+            //element *= 2;
+        }
+        console.log("arr", arr);
+
+        for(let i = 0, len = arr.length; i < len; i++)
+        {
+            console.log("arr","[",i,"]", arr[i]);
+            arr[i] += 2;
+        }
+        console.log("new arr", arr);
+
+        for(let [index,value] of arr.entries())
+        {
+            console.log("index", index, "value", value)
+        }
+
+        let letters = ["hello world","go"];
+        
+        let uppercase = "";
+        letters.forEach(value=> uppercase += value.toUpperCase())
+        console.log("uppercase", uppercase)
+    </script>
+</html>

@@ -1,0 +1,50 @@
+<html>
+    <script>
+        let arr = [1,2,3,4,5];
+        let sum = 0;
+
+        /*for(let i = 0, len = arr.length; i < len; i++)
+        {
+            console.log("arr", "[", i, "]", arr[i]);
+            sum += arr[i];
+        }
+
+        console.log("sum=>", sum)*/
+
+        arr.forEach(value=> sum += value);
+        console.log("sum", sum);
+
+        let arr2 = arr.map(value => value * 3);
+        console.log("arr2", arr2);
+
+        let arr3 = [
+            {
+                name : 'acid',
+                age : 20,
+                gender : 'male'
+            },
+
+            {
+                name : 'lucy',
+                age : 22,
+                gender : 'fmale'
+            },
+
+            {
+                name : 'karke',
+                age : 25,
+                gender : 'male'
+            }
+        ];
+
+        let even = arr.filter(value => value %2 == 0);
+        console.log("even", even);
+
+        even = arr.filter(value => value > 0);
+        console.log("value > 0", even);
+
+        const array = [1,2,3,4,5];
+        const double = array.forEach(x => x * 2);
+        console.log("double", double)
+    </script>
+</html>

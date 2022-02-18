@@ -1,0 +1,20 @@
+<html>
+    <button id="btngarbage" type="button">Collect</button>
+    <script>
+        let m = new Map([]);
+        console.log("map ", m);
+
+        let garry = [];
+
+        for(let i = 0; i < 100; i++)
+        {
+            garry.push( new Array(1000) );
+        };
+
+        m.set(garry, "value");
+        document.getElementById("btngarbage").addEventListener("click",function()
+        {
+            garry = null;
+        });
+    </script>
+</html>

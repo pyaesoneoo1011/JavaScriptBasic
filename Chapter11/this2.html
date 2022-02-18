@@ -1,0 +1,26 @@
+<html>
+    <script>
+        let obj = {
+            name : "Acid",
+            age : 23,
+
+            display : function()
+            {
+                console.log("Name ", this.name, "Age ", this.age);
+            }
+        }
+        obj.display();
+
+        let f = obj.display;
+        //f();
+        //console.log("f", f)
+
+        let obj2 = {
+            name : "Atom",
+            age : 22,
+        };
+
+        let func = f.bind(obj2);
+        func();
+    </script>
+</html>

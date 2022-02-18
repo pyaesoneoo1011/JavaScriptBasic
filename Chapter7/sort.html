@@ -1,0 +1,16 @@
+<html>
+    <script>
+        let arr = [100,2,21,84,5];
+
+        console.log("sorted arr", arr.sort());
+        console.log("sorted arr", arr.sort((a,b) => a - b));
+        console.log("sorted arr", arr.sort((a,b) => b - a));
+
+        let arr2 = [2, 5, 400, 90, 1, -12];
+        console.log("sorted arr2",arr2.sort(function(a,b){
+            return b - a;
+        }))
+
+        console.log("arr.reverse", arr.reverse());
+    </script>
+</html>

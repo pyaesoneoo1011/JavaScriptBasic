@@ -1,0 +1,35 @@
+<html>
+    <script>
+        let obj = {
+            name : "Acid",
+            age : 21,
+            school : "SLM",
+            display : function hello(msg){
+                console.log(msg, this.name, this.age)
+            }
+        }
+
+        let obj2 = {
+            name : "Royal",
+            age : "18",
+            school : "Sun",
+        }
+
+        let d = obj.display.bind(obj2);
+
+        d("Hi");
+
+        function go(x)
+        {
+            console.log("go function called");
+            return x + this.y
+        }
+        let obj3 = {
+            y : 5
+        }
+
+        let gos = go.bind(obj3);
+        gos(5)
+        console.log(gos(5))
+    </script>
+</html>

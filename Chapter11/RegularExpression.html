@@ -1,0 +1,42 @@
+<html>
+    <script>
+        let pattern = /s$/i;
+        
+        console.log("match ", "goes".match(pattern));
+        console.log("match ", "go".match(pattern));
+        console.log("goes ", pattern.test("goes"));
+        console.log("goeS ", pattern.test("goeS"));
+        console.log("go ", pattern.test("go"));
+
+        let pattern2 = /^g/;
+
+        console.log("goes ", pattern.test("goes"));
+        console.log("aoes", pattern2.test("aoes"));
+
+        let pattern3 = /^[abc]/;
+
+        console.log("boss", pattern3.test("boss"));
+        console.log("goss", pattern3.test("goss"));
+
+        let pattern4 = /[^abc]/;
+        console.log("boss", pattern4.test("boss"));
+        console.log("goss", pattern4.test("goss"));
+
+        pattern = /[a-z]/;
+        console.log("apple ", pattern.test("apple"));
+        console.log("APPLE ", pattern.test("APPLE"));
+        console.log("@% ", pattern.test("@%"));
+
+        pattern = /[a-zA-Z]/;
+
+        console.log("apple ", pattern.test("apple"));
+        console.log("APPLE ", pattern.test("APPLE"));
+
+        pattern = /[0-9]/;
+        
+        console.log("09422223", pattern.test("09422223"));
+        console.log("09apple", pattern.test("09apple"));
+        console.log("apple", pattern.test("apple"));
+
+    </script>
+</html>

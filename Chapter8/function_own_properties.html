@@ -1,0 +1,34 @@
+<html>
+    <script>
+
+        factorial.cache = {};
+        function factorial(num)
+        {
+            if(factorial.cache[num])
+            {
+                console.log("fetch from cache")
+                return factorial.cache[num];
+            }
+
+            let result = 1;
+            console.log("compute")
+            for(let i = num; i >= 1; i --)
+            {
+                result *= i;
+            }
+            factorial.cache[num] = result;
+            return result;
+        }
+        console.log("factorial(3)", factorial(3))
+        console.log("factorial(3)", factorial(3))
+        console.log("factorial(3)", factorial(3))
+        console.log("factorial(5)", factorial(5))
+        console.log("factorial(5)", factorial(5))
+
+        /*let arr = [1,2,3,4,5];
+        for(let i = 0; i < arr.length; i++)
+        {
+            console.log("i is", i, arr[i])
+        }*/
+    </script>
+</html>

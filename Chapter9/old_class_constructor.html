@@ -1,0 +1,39 @@
+<html>
+    <script>
+        function Human(name, age)
+        {
+            this.name = name;
+            this.age = age;
+            this.display = function()
+            {
+                console.log("Name is ", name, "Age is ", age);
+            }
+        }
+
+        let human = new Human('Acid', 21);
+        human.display();
+
+        /*let human = Human('Acid', 21);
+        human.display()*/
+        
+        function Teacher()
+        {
+            this.teach = function()
+            {
+                console.log("Teacher ", this.name, "teaches us.");
+            }
+        }
+
+        Teacher.prototype = new Human("Thet Khine", 37);
+        let teacher = new Teacher();
+        teacher.display();
+        teacher.teach();
+        let teacher2 = new Teacher("Aung Aung", 42);
+        teacher2.display();
+
+        console.log("teacher instanceof human", teacher instanceof Human);
+        console.log("teacher instanceof Teacher", teacher instanceof Teacher);
+        console.log("teacher instanceof Object", teacher instanceof Object);
+        console.log("Constructor ", teacher.constructor)
+    </script>
+</html>

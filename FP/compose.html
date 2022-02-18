@@ -1,0 +1,27 @@
+<html>
+    <script>
+        const toupper = (str) => str.toUpperCase();
+        const appendhi = (str) => str + " Hi";
+        const upperandappendhi = (str) => appendhi(toupper(str));
+
+        console.log(upperandappendhi("Hello"));
+
+        function compose(funA, funB)
+        {
+            return function(str)
+            {
+                return funA(funB(str));
+            }
+        }
+
+        const result = compose(appendhi, toupper);
+        console.log("Result", result("apple"));
+
+        const compose2 = (funA, funB) => (str) => funA(funB(str));
+        const addhello = (str) => str + " Hello";
+        const process = compose2(toupper, addhello);
+        console.log("compose2", process("orange"));
+
+
+    </script>
+</html>

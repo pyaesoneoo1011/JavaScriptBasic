@@ -1,0 +1,18 @@
+<html>
+    <script>
+        function rest(first, ...rest)
+        {
+            console.log("first", first);
+            for(const value of rest)
+            {
+                console.log("value", value);
+            }
+        }
+
+        rest(10,1,2,3,4,5,6);
+
+        let arr = [1,10,0,-3,25];
+        console.log("min", Math.min(1,2,3,4,5));
+        console.log("min", Math.min(...arr));
+    </script>
+</html>

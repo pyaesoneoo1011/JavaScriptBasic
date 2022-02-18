@@ -1,0 +1,23 @@
+<html>
+    <script>
+        function Mymodule()
+        {
+            function method()
+            {
+                console.log("Old module method");
+            }
+
+            function display()
+            {
+                console.log("This is display");
+            }
+
+            return {
+                api : display
+            }
+        }
+
+        let m = Mymodule();
+        m.api();
+    </script>
+</html>

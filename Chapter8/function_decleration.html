@@ -1,0 +1,30 @@
+<html>
+    <script>
+        function hello(){
+            console.log("hello")
+        }
+        hello();
+
+        let func = function greet(){
+            console.log("hello good morning");
+        };
+        func();
+
+        const squar = function square(x){
+            return x * x;
+        };
+        console.log("square", squar(3));
+
+        const tensquare = function tensquare(x){
+            return x * x;
+        };
+        console.log("square", squar(10));
+
+        square = (x) => x * x;
+        console.log("square(5)", square(5));
+
+        let filtered = [1,2,3,4,5,null].filter(x => {
+            return x != null;});
+        console.log("filered", filtered);
+    </script>
+</html>

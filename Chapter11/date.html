@@ -1,0 +1,26 @@
+<html>
+    <script>
+        let date = new Date();
+
+        console.log("today date", date);
+        console.log("date in milliseconds", date.getTime());
+
+        console.log("get time", date.getTime());
+        console.log("get date", date.getDay());//day of the week
+        console.log("local date time", date.toLocaleDateString());
+        console.log("local string", date.toLocaleString());
+        console.log("full year", date.getFullYear());
+        console.log("date", date.getDate());
+        console.log("hours", date.getHours());
+
+        let century = new Date(2022,
+                                    1,
+                                    16,
+                                    13,18);
+        console.log("century", century);
+
+        century = new Date(Date.UTC(2020,1,16));
+
+        console.log("century", century);
+    </script>
+</html>

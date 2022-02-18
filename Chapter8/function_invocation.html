@@ -1,0 +1,36 @@
+<html>
+    <script>
+        function hello(msg)
+        {
+            msg = msg || "Good morning";
+            console.log(msg);
+        }
+        hello("Nice to meet you");
+
+        function hi(msg = "Good afternoon")
+        {
+            console.log(msg);
+        }
+        hi();
+
+        let obj = {
+            name : "Acid",
+            age : 21,
+            display :function funcshow(){
+                console.log("name is",this.name, "age is", this.age);
+            }
+        }
+
+        obj.display()
+
+        function showname(arg1, arg2)
+        {
+            this.name = arg1;
+            this.age = arg2;
+            console.log("name", this.name, "age", this.age)
+        }
+
+        let func = new showname("lapyae", 21);
+        console.log("func", func.name)
+    </script>
+</html>

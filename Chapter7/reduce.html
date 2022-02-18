@@ -1,0 +1,38 @@
+<html>
+    <script>
+        let arr = [1,2,3,4,5,6,7,8];
+        let sum = arr.reduce((a,b) => a+b);
+        console.log("sum", sum)
+
+        let min = arr.reduce((a,b) => a<b?a:b);
+        console.log("minimum", min);
+
+        let max = arr.reduce((a,b) => a>b?a:b);
+        console.log("maximum", max);
+
+        let users = [
+            {
+                name : 'acid',
+                age : 20,
+                gender : 'male'
+            },
+
+            {
+                name : 'lucy',
+                age : 22,
+                gender : 'female'
+            },
+
+            {
+                name : 'karke',
+                age : 25,
+                gender : 'male'
+            }
+        ];
+          
+        let youngest_male =  users.filter(user=>user.gender=='male')
+                                    .reduce((userA, userB) => userA.age < userB.age ? userA:userB);
+        console.log("youngest_male", youngest_male)
+
+    </script>
+</html>

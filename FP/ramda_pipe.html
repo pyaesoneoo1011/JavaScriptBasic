@@ -1,0 +1,34 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script>
+        const toupper = (str) => str.toUpperCase();
+        const appendhi = (str) => str + " Hi";
+        const addhello = (str) => str + " Hello";
+        
+        const twofunction = (funA, funB) => (str) => funB(funA(str));
+        const result = twofunction(toupper, appendhi);
+
+        console.log("result", result("Hello"))
+
+        /*function pipe(funA, funB)
+        {
+           return function(str)
+           {
+               return funB(funA(str));
+           }
+        };
+
+        const result = pipe(toupper, appendhi);
+        console.log("result", result("testing"));
+
+        const result2 = pipe(toupper, addhello);
+        console.log("result2", result2("testing"))*/
+
+        const process = R.compose(appendhi, toupper);
+        console.log("Rcompose=>", process("hello"));
+
+        const process2 = R.pipe(toupper, appendhi);
+        console.log("Rpipe=>", process2("hello"));
+
+    </script>
+</html>

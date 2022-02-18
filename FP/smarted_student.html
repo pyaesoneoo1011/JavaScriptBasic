@@ -1,0 +1,23 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script>
+        const students = ['acid', 'zaw zaw', 'mg mg', 'aung aung'];
+        const grade = [70, 80, 92, 60];
+        const pairstu = R.zip(students, grade);
+        const result = R.pipe(
+                                R.zip(),
+                                R.sortBy(R.prop(1)),
+                                R.pluck(0),
+                                R.reverse(),
+                                R.head()
+                                );                                
+
+        console.log("result", result(students, grade))
+        /*const sorted = R.sortBy(R.prop(1), pairstu);
+        console.log("pairstu", pairstu);
+        //console.log("sort", R.sortBy(R.prop(1), pairstu));
+        console.log("pluck", R.pluck(0, sorted));
+        console.log("reverse", R.reverse(R.pluck(0, sorted)));
+        console.log("head", R.head(R.reverse(R.pluck(0, sorted))))*/
+    </script>
+</html>

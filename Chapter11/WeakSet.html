@@ -1,0 +1,21 @@
+<html>
+    <button id="btngarbage" type="button">Collect</button>
+    <script>
+        let s = new WeakSet([]);
+        console.log("set ", s);
+
+        let garry = [];
+
+        /*for(let i = 0; i < 100; i++)
+        {
+            garry.push( new Array(1000) );
+        };*/
+
+        s.add(garry,"value");
+        document.getElementById("btngarbage").addEventListener("click",function()
+        {
+            garry = null;
+        });
+        console.log("array ", garry)
+    </script>
+</html>

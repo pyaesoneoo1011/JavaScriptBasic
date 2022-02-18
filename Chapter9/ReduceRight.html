@@ -1,0 +1,28 @@
+<html>
+    <script>
+        const toUpper = (str) => str.toUpperCase();
+        //console.log("touppercase", toupper("hello"));
+        const appenHi = (str) => str + " Hi";
+
+        function pipe(...funs)
+        {
+            return function(x)
+            {
+                let result = x;
+                for(let i=0;i<funs.length;i++)
+                {
+                    result = funs[i](result);
+                }
+                return result;
+            }
+        }
+
+        let appendandupper = pipe(toUpper, appenHi);
+        console.log("pipe", appendandupper("test"));
+
+        //compose with reduce right
+        const compose = (...funs) => (x) => funs.reduce((y,f) => f(y),x);
+        let caddandhi = compose(toUpper,appenHi);
+        console.log("compose wiht reduce right", caddandhi("hello"))
+    </script>
+</html>

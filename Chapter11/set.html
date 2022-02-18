@@ -1,0 +1,26 @@
+<html>
+    <script>
+        let s = new Set([1,2,2,3,4,5,10]);
+        console.log("set ", s);
+        console.log("size ", s.size);
+        s.clear();
+        console.log("set ", s);
+
+        s.add(1);
+        console.log("Set ", s);
+        s.delete(1);
+        console.log("Set ", s);
+        console.log("Has ", s.has(1));
+        s.add(2);
+        s.add(1);
+        console.log("S ", s)
+        console.log("Has ", s.has(2));
+
+        for(const m of s)
+        {
+            console.log("member ", m);
+        };
+
+        s.forEach(m => console.log("m ", m));
+    </script>
+</html>

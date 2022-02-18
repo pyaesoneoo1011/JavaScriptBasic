@@ -1,0 +1,45 @@
+<html>
+    <script>
+        class Human
+        {   
+            _name = "";
+            _age = 0;
+            #school = "SLM";
+            /*constructor(name, age)
+            {
+                this._name = name;
+                this._age = age;
+            }*/
+
+            display()
+            {
+                console.log("Name is ", this._name, "Age is ", this._age, "school",this.#school);
+            }
+        }
+        let h = new Human();
+        console.log("human ", h);
+        h.display();
+        //h.#school;
+
+        //private version with closure version
+        function Phuman(name, age)
+        {
+            let _name = name;
+            let _age = age;
+            
+            function display()
+            {
+                console.log("name is ", _name, "age is", _age);
+            }
+
+            return {
+                display
+            };
+        }
+
+        let human = Phuman("Acid", 21);
+        human.display();
+        /*console.log("name ", human.name);*/
+
+    </script>
+</html>

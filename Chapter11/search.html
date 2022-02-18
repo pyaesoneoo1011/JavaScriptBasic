@@ -1,0 +1,32 @@
+<html>
+    <script>
+        let pattern = /script/i;
+
+        console.log("search ", "javascript programming".search(pattern));
+        console.log("search ", "java programming".search(pattern));
+
+        pattern = /javascript/i;
+
+        console.log("repleaced ", "javascript programming".replace(pattern, "python"));
+        console.log("repleaced ", "C# programming".replace(pattern, "python"));
+
+        pattern = /script/i;
+
+        console.log("match ", "javascript programming".match(pattern));
+        console.log("match ", "C# programming".match(pattern));
+
+        let quote = /"([^"]*)"/g;
+
+        console.log('He said to "stop" "Jhon"'.replace(quote, '[$1]'));
+
+        quote = /"(?<quotedText>[^"]*)"/g;
+
+        console.log('He said to "stop" "Jhon"'.replace(quote, '[$<quotedText>]'));
+
+        let s = "10 is 3 times of 5";
+            pattern = /\d+/gu;
+        console.log("replace ", s.replace(pattern, n => parseInt(n).toString(16)));
+
+
+    </script>
+</html>

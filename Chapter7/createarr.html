@@ -1,0 +1,31 @@
+<html>
+    <script>
+        let arr = [10,20,38,40];
+        console.log("arr", arr);
+
+        let arr2 = [...arr];
+        console.log("arr2", arr2);
+
+        let arr3 = arr;
+        console.log("arr3 === arr", arr3 == arr);
+        console.log("arr === arr2", arr === arr2);
+
+        let arr4 = Array(5);
+        console.log("arr4 ", arr4, "arr4 length", arr4.length);
+        
+        for(let i = 0, len = arr4.length; i < len; i++)
+        {
+            console.log("arr4", "[",i,"]", arr4[i])
+        };
+
+        let arr5 = Array(2,4,6);
+        console.log("arr5", arr5);
+
+        let strArr = Array.of("hello","world");
+        console.log("strArr", strArr);
+
+        let strArr2 = Array.from(arr);
+        console.log("strArr2", strArr2);
+        console.log("strArr2 == arr", strArr2 == arr)
+    </script>
+</html>

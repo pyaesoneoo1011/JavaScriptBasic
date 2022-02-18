@@ -1,0 +1,25 @@
+<html>
+    <script>
+        let students = [
+            {
+                name : "acid",
+                age : 21
+            },
+
+            {
+                name : "mg mg",
+                age : 22
+            },
+
+            {
+                name : "aung aung",
+                age : 30
+            }
+        ]
+        
+        let getname = (student) => student.name;
+        let magrade =  (a,b) => a.age > b.age? a : b;   
+        let maxgrade = getname(students.reduce(magrade));
+        console.log("maxgrade", maxgrade)
+    </script>
+</html>

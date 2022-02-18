@@ -1,0 +1,27 @@
+<html>
+    <style>
+        .btn{
+            background-color: 00ff00;
+            font-size: medium;
+            border: 10px,solid;
+        }
+    </style>
+    <body>
+        <button class="btn" id="btn-clear"  type="button">
+            Clear
+        </button>
+    </body>
+    <script>
+        console.log("Start");
+        setTimeout(()=>console.log("code is executed"), 0);
+        console.log("end");
+
+        function hello()
+        {
+            console.count("Hello");
+        }
+
+        let showTimer = setInterval(hello, 1000);
+        document.getElementById("btn-clear").addEventListener("click", ()=> clearInterval(showTimer));
+    </script>
+</html>

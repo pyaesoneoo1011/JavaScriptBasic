@@ -1,0 +1,14 @@
+<html>
+    <script>
+        const toupper = (str) => str.toUpperCase();
+        const appendhi = (str) => str + " Hi";
+        const upperandappendhi = (str) => appendhi(toupper(str));
+
+        const pipe = (funA, funB) => (str) => funB(funA(str));
+        const  result = pipe(toupper, appendhi);
+
+        console.log("result", result("mango"))
+
+
+    </script>
+</html>

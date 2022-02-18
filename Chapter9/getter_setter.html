@@ -1,0 +1,57 @@
+<html>
+    <script>
+        class Human
+        {
+            constructor(name, age)
+            {
+                this._name = name;
+                this._age = age;
+            }
+
+            display()
+            {
+                console.log("Name is ", this._name, "Age is ", this._age);
+            }
+
+            get age()
+            {
+              return this._age;
+            }
+
+            set age(newAge)
+            {
+                if(newAge > 0 && newAge < 100)
+                {
+                    this._age = newAge;
+                }
+            }
+        }
+        let h = new Human("Tk", 37)
+        h.display();
+
+        class Teacher extends Human
+        {
+            
+          constructor(name, age, school)
+          {
+            super(name, age)
+            this.school = school
+          }
+
+          teach()
+          {
+              console.log("teacher ", this._name , "teach us");
+          }
+
+        } 
+
+        let teacher = new Teacher("Acid", 21);
+        teacher.teach();
+
+        console.log("Age", teacher.age);
+        teacher.age = 200;
+        console.log("Age", teacher.age);
+        console.log("teacher ", teacher)
+
+    </script>
+</html>

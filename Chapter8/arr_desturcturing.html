@@ -1,0 +1,29 @@
+<html>
+    <script>
+        function des([x, y, ...rest]){
+            console.log("x", x, "y", y);
+            console.log("rest", rest)
+        }
+
+        des([1,2,3,4,5,6]);
+        
+        let a = 2, b = 5;
+        console.log("a", a, "b", b);
+
+        [a,b] = [b,a];
+        console.log("a", a, "b", b);
+
+        let obj = {
+            name : "acid", 
+            age : 21,
+            shoocl : "SLM",
+            adress : "Khampat"
+        }
+
+        function info({name, age, ...props})
+        {
+            console.log("name", name, "age", age, "other property", props)
+        }
+        info(obj)
+    </script>
+</html>

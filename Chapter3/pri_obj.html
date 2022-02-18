@@ -1,0 +1,33 @@
+<html>
+    <script>
+        let a = 3;
+        let b = a;
+        console.log("A is ", a);
+        console.log("B is ", b);
+        a++;
+        console.log("new A is ", a);
+        console.log("new B is ", b);
+
+        let human1={
+            name:'mg mg',
+            age:30
+        }
+
+        let human2 = human1
+        console.log(human1.name)
+        console.log(human2.name)
+
+        human1.name = 'Zaw Zaw'
+        console.log(human1.name)
+        console.log(human2.name)
+
+        human2 = {
+            name: 'Ko Ko',
+            age: 30
+        }
+
+        human2.name = 'Aung Aung';
+        console.log(human1.name)
+        console.log(human2.name)
+    </script>
+</html>

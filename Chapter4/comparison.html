@@ -1,0 +1,58 @@
+<html>
+    <script>
+        let a = 2;
+        let b = 3;
+        let c = '5';
+
+        console.log("a > b", a > b);
+        console.log("'null' > null", 'null' > null);
+        console.log("'null' > 'null'", 'null' > 'null');
+        console.log("'null' >= 'null'", 'null' >= 'null');
+        console.log("'null' <= 'null'", 'null' <= 'null');
+
+        let obj = {
+            valueOf:function()
+            {
+                return 5;
+            }
+        }
+
+        console.log("5 > obj", 5 > obj);
+        console.log("5 >= obj", 5 >= obj);
+        console.log("'5hello' >= obj", '5hello' >= obj);
+
+        let obj2 = {
+            valueOf:function()
+            {
+                return {};
+            },
+
+            toString:function()
+            {
+                return 'go';
+            }
+        };
+
+        console.log("'Go'<obj2", 'Go'<obj2);
+        console.log("'Zoo' > 'apple'", 'Zoo' > 'apple')
+
+        let arr = [1,2,3];
+        let arr2 = [1,2,3,4];
+        
+        console.log("arr > arr2", arr > arr2);
+
+        let obj3 = {
+            name: 'Acid',
+            age: 21
+        }
+
+        console.log("'name' in obj3", 'name' in obj3);
+
+        let arr3 = [10,20,30,40];
+
+        console.log("'0' in arr3", '0' in arr3);
+        console.log("'10' in arr3", '10' in arr3);
+        console.log("valueOf in obj3", 'valueOf' in obj3);
+        console.log("toString in obj3", 'toString' in obj3);
+    </script>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <script>
+        //internalization = I18n
+        let euros = Intl.NumberFormat("es", {style:"currency",
+                                             currency:"EUR"});
+
+        console.log("euros",euros.format(10000));
+
+        let mmk = Intl.NumberFormat("mm", {style:"currency",
+                                           currency:"MMK"});
+
+        console.log("mmk", mmk.format(4500000));
+
+        let usd = Intl.NumberFormat("en", {style:"currency",
+                                           currency:"USD"});
+
+        console.log("usd", usd.format(4500000));
+
+        let d = new Date();
+        console.log("date",d);
+
+        let date = new Date("Thu Feb 17 2022 12:15:42 GMT+0630");
+
+        console.log("us date format", Intl.DateTimeFormat("en-US").format(date));
+        console.log("myanmar date format", Intl.DateTimeFormat("mm").format(date));
+        console.log("france date format", Intl.DateTimeFormat("fr-FR").format(date));
+    </script>
+</html>

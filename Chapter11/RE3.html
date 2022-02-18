@@ -1,0 +1,49 @@
+<html>
+    <script>
+        let phonePattern = /^\d{9,11}$/;
+
+        console.log("test(09422137077", phonePattern.test("09422137077"));
+        console.log("test(094221370777", phonePattern.test("094221370777"));
+        console.log("test(0942213707", phonePattern.test("09422137"));
+
+        phonePattern = /^\d{9,}$/;
+
+        console.log("test(09422137077", phonePattern.test("09422137077"));
+        console.log("test(094221370777", phonePattern.test("094221370777"));
+        console.log("test(0942213707", phonePattern.test("09422137"));
+
+        phonePattern = /^\d{9}$/;
+
+        console.log("test(09422137077", phonePattern.test("09422137077"));
+        console.log("test(094221370777", phonePattern.test("094221370777"));
+        console.log("test(0942213707", phonePattern.test("094221377"));
+
+        phonePattern = /^\d?/;
+
+        console.log("test(09422137077)", phonePattern.test("09422137077"));
+        console.log("test(094221370777)", phonePattern.test("094221370777"));
+        console.log("test(apple)", phonePattern.test("apple"));
+
+        phonePattern = /^\d+/;
+
+        console.log("test(09422137077)", phonePattern.test("09422137077"));
+        console.log("test(094221370777)", phonePattern.test("094221370777"));
+        console.log("test(apple)", phonePattern.test("apple"));
+
+        phonePattern = /^\d*/;
+
+        console.log("test(09422137077)", phonePattern.test("09422137077"));
+        console.log("test(094221370777)", phonePattern.test("094221370777"));
+        console.log("test(apple)", phonePattern.test("apple"));
+
+        phonePattern = /(java|javascript)\sprogramming/i;
+
+        console.log("Java programming", phonePattern.test("Java programming"));
+        console.log("javascriptprogramming", phonePattern.test("javascript programming"));
+        console.log("test(apple)", phonePattern.test("apple"));
+
+        let checkEmail = /\w@\w.[com|org|gov]/i;
+
+        console.log("acid@gmail.com", checkEmail.test("acid@gamil.com"));
+    </script>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <script>
+        function Mymodule()
+        {
+            function priveate()
+            {
+                console.log("private funcion")
+            }
+
+            function public()
+            {
+                console.log("public funcion")
+            }
+
+            return{
+                api : public
+            }
+        }
+        
+        let m = Mymodule();
+        m.api()
+    </script>
+</html>

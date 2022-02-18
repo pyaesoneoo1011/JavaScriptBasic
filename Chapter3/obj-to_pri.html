@@ -1,0 +1,30 @@
+<html>
+    <script>
+       let a = new Boolean(true);
+
+       if(a)
+       {
+            console.log("True Path")
+       }
+       else
+       {
+        console.log("False Path")
+       }
+
+       let c = {
+           toString:function()
+           {
+               console.log("To string called");
+               return "HI"
+           },
+
+           valueOf:function()
+           {
+               console.log("valueof called");
+               return "Hello"
+           }
+       }
+
+       console.log("c to string=>", ""+c)
+    </script>
+</html>

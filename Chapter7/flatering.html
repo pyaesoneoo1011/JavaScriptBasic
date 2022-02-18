@@ -1,0 +1,11 @@
+<html>
+    <script>
+        let arr = [1,2,3,[4,5,[6,7,9]]];
+        let newarr = arr.flat(3);
+        console.log("newarr", newarr) ;
+
+        let arr2 = ["hello world", "how are you?"];
+        let words = arr2.flatMap(element => element.split(" "));
+        console.log(words);
+    </script>
+</html>

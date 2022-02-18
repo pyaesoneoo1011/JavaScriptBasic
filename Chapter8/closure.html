@@ -1,0 +1,32 @@
+<html>
+    <script>
+
+        function Mymodule()
+        {
+            let counter = 0;
+            function public()
+            {
+                console.log("public function","counter", counter);
+                counter++;
+            }
+
+            function private()
+            {
+                console.log("private function")
+            }
+
+            return {
+                api : public
+            }
+        }
+
+        let d = Mymodule();
+        d.api();
+        d.api()
+        d.api()
+        d.api()
+        d.api()
+        d.api()
+
+    </script>
+</html>

@@ -1,0 +1,80 @@
+<html>
+    <script>
+        let obj = {
+            name : 'Acid',
+            age : 21
+        };
+
+        let obj2 = {
+            name : 'Atom',
+            age : 20
+        }
+
+        let arr = [obj, obj2];
+        console.log("arr", arr);
+
+        obj2.name = "Changed";
+        console.log("arr", arr);
+
+        let arr2 = ['apple', 'orange', 'mango'];
+
+        console.error("error");
+        console.warn("warm");
+        console.info(obj);
+        console.table(arr2);
+        console.count("Hello");
+        console.count("Hello");
+        console.count("Hello");
+        console.countReset("Hello");
+        console.count("Hello");
+        console.group("I am Acid");
+        console.group();
+        console.log("level 2");
+        console.group();
+        console.log("level 3");
+        console.group();
+        console.log("level 4");
+        console.groupEnd()
+        console.warn("level 5")
+
+        function greet()
+        {
+            function name()
+            {
+                console.log("My name is Acid");
+                console.trace();
+            }
+            name();
+        }
+        greet();
+
+        let i = 2;
+        console.assert(i > 1, "I is not greater than 0");
+        console.log("i ", i);
+        
+        let arr3 = [];
+        for(let i = 0; i < 20; i++)
+        {
+            if(i %2 == 0)
+            {
+                arr3.push(i)
+            }
+        }
+        console.log("arr3", arr3);
+
+        function greet(msg)
+        {
+            console.log(msg)
+        }
+        
+        i = 0;
+        console.time("start")
+        while(i<20)
+        {
+            greet("Hello How are you?");
+            i++;
+            console.timeLog("start");
+        }
+        console.timeEnd("start");
+        </script>
+</html>

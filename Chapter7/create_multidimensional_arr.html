@@ -1,0 +1,19 @@
+<html>
+    <script>
+        let arr = [
+            [10,20,30],
+            [40,50,],
+            [60,70,80]
+        ];
+
+        for(let row = 0, len = arr.length; row < len; row++)
+        {
+            for(let col = 0, colen = arr[row].length; col < colen; col++)
+            {
+                console.log("arr", "[",row, "]", "[", col, "]", arr[row][col]);
+                let mutiply = row * col
+                console.log("multiply", mutiply)
+            }
+        }
+    </script>
+</html>

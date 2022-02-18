@@ -1,0 +1,32 @@
+<html>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ramda/0.25.0/ramda.min.js"></script>
+    <script>
+        const a = 5;
+        console.log("identity operator", R.identity(a));
+
+        console.log("'' || 2", '' || 2)
+
+        const check = function(funA, funB){
+            return function(val){
+                return funA(val) || funB(val);
+            }
+        };
+
+        const isempty = (str) => str.length == 0;
+        const withuppercase = (str) => str.toUpperCase()[0] == str[0];
+        
+        console.log("isempty", isempty(''));
+        console.log("start with uppercase", withuppercase('hello'))
+
+        const result = check(isempty, withuppercase);
+        console.log("result", result(''));
+        console.log("result", result("hello"));
+        console.log("result", result("Hello"));
+
+        const ramcheck = R.curry((funA, funB, val) => funA(val) || funB(val));
+        let ramresult = ramcheck(isempty, withuppercase);
+        console.log("ramresult", ramresult(''));
+        console.log("ramresult", ramresult('hello'));
+        console.log("ramresult", ramresult('Hello'));
+    </script>
+</html>

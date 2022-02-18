@@ -1,0 +1,33 @@
+<html>
+    <script>
+        let obj = {
+            name : "Acid",
+            age : 21,
+            school : "SLM",
+            data : [1,2,3,4,5],
+
+            info : function()
+            {
+                console.log(`His name is ${this.name} and age is ${this.age}`)
+            },
+
+            toJSON:function()
+            {
+                console.log("toJSON invoked")
+                return{
+                    username : this.name,
+                    age : this.age,
+                    userdata : this.data,
+                }
+            }
+        };
+
+        let json = JSON.stringify(obj);
+
+        console.log("json string", json);
+
+        let parstring = JSON.parse(json);
+
+        console.log("parse string", parstring);
+    </script>
+</html>
