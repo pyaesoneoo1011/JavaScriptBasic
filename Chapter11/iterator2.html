@@ -1,0 +1,47 @@
+<html>
+    <script>
+        let iterable = [1,2,3,4,5];
+        let iterator = iterable[Symbol.iterator]();
+        console.log("next", iterator.next());
+        //console.log("iterator.next().done", iterator.next().done)
+        console.log("next", iterator.next());
+        console.log("next", iterator.next());
+        console.log("next", iterator.next());
+        console.log("next", iterator.next());
+        console.log("next", iterator.next());//iterator finished
+        console.log("iterator.next().done", iterator.next().done)
+
+
+        /*for(let result = iterator.next(); !result.done; result = iterator.next())
+        {
+            console.log("result", result.value)
+        };*/
+
+        let students = [
+            {
+                name : "mg mg",
+                age : 21
+            },
+
+            {
+                name : 'aung aung',
+                age : 20
+            }
+        ];
+
+       iterator = students[Symbol.iterator]();
+        //console.log("next", iterator.next().value);
+
+        for(let result = iterator.next(); !result.done; result = iterator.next())
+        {
+            console.log("value", result.value)
+        }
+
+        let itr = [1,2,3,4,5][Symbol.iterator]();
+        let head = itr.next().value;
+        let tail = [...itr];
+
+        console.log("head", head);
+        console.log("tail", tail);
+    </script>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <script>
+        let arr = [1,2,3,4,5];
+        let result = [];
+
+        for(let i=0; i<arr.length;i++)
+        {
+            console.log("i", i);
+            result.push(i);
+        }
+
+        console.log("result", result);
+
+        let max = Math.max(...arr);
+        console.log("maximum", max);
+
+        let [a,...b] = arr;
+        console.log("a", a, " b ", b);
+
+        let obj = {
+            name : "acid",
+            age : 21,
+        }
+
+        let {name, age} = obj;
+        console.log("name", name, "age", age);
+    </script>
+</html>

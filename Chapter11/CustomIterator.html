@@ -1,0 +1,42 @@
+<html>
+    <script>
+       class Range
+        {
+            constructor(from,to)
+            {
+                this.from = from;
+                this.to = to;
+            }
+            [Symbol.iterator]()
+            {
+                console.log("iterator invoked")
+                let i = this.from
+                let to = this.to;
+                return {
+                    next()
+                    {
+                        //console.log("next called")
+                        //console.log("from", i, " to ", to)
+                        return {
+                            value : i < to? i : undefined,
+                            done : i++ < to? false: true
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        let r = new Range(1,10)
+        for(let i of r)
+        {
+            console.log("i is", i)
+        }
+
+        //console.log("r", r.next());
+        //console.log("r", r.next());
+        //console.log("r", r.next());
+        //console.log("r", r.next());
+        
+    </script>
+</html>
